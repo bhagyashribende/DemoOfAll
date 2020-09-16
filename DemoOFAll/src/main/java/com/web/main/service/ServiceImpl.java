@@ -21,6 +21,7 @@ public class ServiceImpl implements ServiceI{
 
 	@Override
 	public Student getStudent(int sid) {
+		System.out.println("service layer");
 		Student stu=sr.findById(sid).get();
 		return stu;
 	}
@@ -34,12 +35,14 @@ public class ServiceImpl implements ServiceI{
 
 	@Override
 	public void updateStudent(Student stu) {
+		System.out.println("service layer");
 		sr.save(stu);
 		
 	}
 
 	@Override
 	public Student editStudent(int sid) {
+		System.out.println("service layer");
 		Student stu=sr.findById(sid).get();
 		return stu;
 	}
